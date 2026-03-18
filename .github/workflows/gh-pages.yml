@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_FORMSPREE_ENDPOINT: ${{ secrets.VITE_FORMSPREE_ENDPOINT }}
+
+      - name: Content Validation
+        run: npm run validate
+
+      - name: Smoke Check Assets
+        run: |
+          if ! grep -q "/portfolio/" dist/index.html; then
+            echo "Error: index.html does not contain /portfolio/ base path"
+            exit 1
+          fi
+          if [ ! -f "dist/assets/og-image.png" ]; then
+             echo "Warning: og-image.png missing - but checking assets folder"
+             ls dist/assets
+          fi
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
