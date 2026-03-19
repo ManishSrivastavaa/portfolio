@@ -250,11 +250,22 @@ const Contact = () => {
               </button>
             </form>
           ) : (
-            <div className="h-full flex flex-col justify-center items-center border-4 border-dashed border-gray-200 rounded-3xl p-64 text-center">
-              <div className="text-64 mb-24 grayscale opacity-30">📨</div>
-              <p className="text-gray-400 mb-24">Form disabled (No endpoint configured)</p>
-              <a href={`mailto:${content.personalInfo.email}`} className="btn-secondary">
-                Click to Email Directly
+            <div className="h-full flex flex-col justify-center bg-sand/30 border-2 border-dashed border-gray-200 rounded-3xl p-48 text-center">
+              <div className="w-80 h-80 bg-white rounded-full flex items-center justify-center shadow-lg mx-auto mb-24 text-32">
+                ✉️
+              </div>
+              <h4 className="text-xl font-bold text-navy mb-16">Ready to Collaborate?</h4>
+              <p className="text-gray-custom mb-32 max-w-sm mx-auto leading-relaxed">
+                The form is currently offline, but I am open to discussing leadership roles and consulting. Send a direct inquiry below.
+              </p>
+              <a 
+                href={`mailto:${content.personalInfo.email}?subject=Inquiry from Portfolio`} 
+                className="btn-primary inline-flex items-center justify-center gap-12 px-48 py-20"
+              >
+                Send Direct Email
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
             </div>
           )}

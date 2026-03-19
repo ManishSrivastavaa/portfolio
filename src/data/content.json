@@ -8,38 +8,50 @@
     "linkedin": "https://www.linkedin.com/in/manish-mohan-srivastava/",
     "languages": ["English", "Hindi"],
     "hobbies": ["Travel", "Fitness", "Music", "Reading"],
-    "summary": "Seasoned operations leader with extensive experience driving operational efficiency, program & revenue management for pharma and healthcare tech clients. Expertise in program management, Lean/Six Sigma-driven process optimization, and leading large distributed teams to deliver measurable revenue & margin improvements."
+    "summary": "Seasoned operations leader with over 20 years of experience driving operational efficiency, program & revenue management for pharma and healthcare tech clients. Expertise in program management, Lean/Six Sigma-driven process optimization, and leading large distributed teams to deliver measurable revenue & margin improvements. Proven track record in scaling complex operations and managing multi-million dollar revenue portfolios."
   },
   "metrics": [
     { "label": "Team Members", "value": "300+" },
     { "label": "Revenue Portfolio", "value": "USD 5M" },
     { "label": "Gross Margins", "value": "30%+" },
-    { "label": "Network Supported", "value": "50,000+" }
+    { "label": "Patient Network", "value": "50,000+" }
   ],
   "experience": [
     {
       "company": "Indegene India Pvt. Ltd.",
       "title": "Operations Head / Sr Manager Client Services / Associate Director",
       "range": "Dec 2022 - Present",
-      "location": "Bangalore / Work from home (Gurgaon)",
+      "location": "Bangalore / WFH (Gurgaon)",
       "bullets": [
         "Directed and oversaw a large-scale operational team of **300+ resources**, including Team Leads and Project Managers across India.",
         "Supporting a network of over **50,000 patients**, doctors, and nurses.",
         "Managed a substantial revenue portfolio of **USD 5 million** while driving impressive **gross margins of over 30%**.",
-        "Spearheaded the implementation and execution of Patient Support Programs for major pharmaceutical clients.",
-        "Developed and executed strategic initiatives to optimize resource allocation and drive revenue growth."
+        "Spearheaded the implementation and execution of **Patient Support Programs** for major pharmaceutical clients.",
+        "Developed and executed strategic initiatives to optimize resource allocation and drive revenue growth.",
+        "Responsible for identifying and mitigating potential risks and resolving escalated issues."
       ]
     },
     {
       "company": "Indegene India Pvt. Ltd.",
       "title": "Account / Program Manager",
       "range": "Jul 2021 - Nov 2022",
-      "location": "Bangalore / Work from home (Gurgaon)",
+      "location": "Bangalore / WFH (Gurgaon)",
       "bullets": [
         "Managed a diverse portfolio of projects spanning **seven countries** across the Asia-Pacific region (Australia, NZ, Japan, China, Taiwan, Macau, India).",
         "Led cross-functional teams throughout the entire project lifecycle, ensuring projects aligned with client objectives.",
         "Ensured consistent achievement of client **Service Level Agreements (SLAs)** through proactive monitoring.",
-        "Analyzed business requirements documents (BRDs) and reviewed design specifications for project alignment."
+        "Analyzed business requirements documents (BRDs) and reviewed design specifications."
+      ]
+    },
+    {
+      "company": "Family Business / Network Marketing",
+      "title": "Operations & Business Development Support",
+      "range": "Aug 2019 - Jul 2021",
+      "location": "Gurgaon",
+      "bullets": [
+        "Supported organizational objectives by actively participating in a family-owned network marketing business.",
+        "Contributed to team building and business development initiatives.",
+        "Aided in establishing teams and business operations."
       ]
     },
     {
@@ -48,10 +60,10 @@
       "range": "Jul 2007 - Aug 2019",
       "location": "Gurgaon",
       "bullets": [
-        "Managed end-to-end Revenue Cycle and SLA Management for a team of **1400-1500 FTEs** across multiple locations in India (2012-2014).",
+        "Managed end-to-end **Revenue Cycle and SLA Management** for a team of **1400-1500 FTEs** across multiple locations in India (2012-2014).",
         "Directly supervised a team of **140 FTEs** in Provider Network Operations as Deputy Manager (2010-2012).",
         "Enhanced efficiencies across teams through **Lean and Six Sigma projects**, resulting in annual cost savings.",
-        "Championed a **Green Belt project** focused on enhancing form-level accuracy, leading to measurable improvements.",
+        "Championed a **Green Belt project** focused on enhancing form-level accuracy.",
         "Led a Lean project targeting **latency reduction** in internal systems."
       ]
     },
@@ -64,6 +76,39 @@
         "Directed a team of **20 telecallers** in a high-volume call center supporting the Capital One Credit Cards program.",
         "Monitored and coached team performance to optimize service delivery and customer engagement.",
         "Focused on achieving key **Service Level Agreements (SLAs)** related to customer satisfaction and AHT."
+      ]
+    },
+    {
+      "company": "Multiserv India Pvt. Ltd.",
+      "title": "Business Development Manager",
+      "range": "Apr 2002 - Oct 2004",
+      "location": "New Delhi",
+      "bullets": [
+        "Drove business growth for a facilities management company, securing new accounts and generating substantial revenue.",
+        "Successfully achieved the turnover goal within the first year.",
+        "Targeted potential clients and strengthened client relationships."
+      ]
+    },
+    {
+      "company": "J.S. Designer",
+      "title": "Head Quality Control Department",
+      "range": "Feb 2001 - Mar 2002",
+      "location": "New Delhi",
+      "bullets": [
+        "Led the Quality Control Department, ensuring production aligned with specifications and quality benchmarks.",
+        "Collaborated with production teams to implement quality control processes and inspections.",
+        "Minimized defects and improved product consistency."
+      ]
+    },
+    {
+      "company": "KBSH Export House",
+      "title": "Sr. Executive P&A Department",
+      "range": "Oct 1999 - Jan 2001",
+      "location": "New Delhi",
+      "bullets": [
+        "Managed payroll and administrative functions, ensuring compliance with regulatory standards.",
+        "Overseeing employee compensation processes, including salary disbursement, ESI, PF, and bonuses.",
+        "Contributed to streamlined HR operations and enhanced employee satisfaction."
       ]
     }
   ],
@@ -88,16 +133,17 @@
         "Established clear communication channels and stakeholder management.",
         "Automated reporting for real-time SLA tracking."
       ],
-      "outcomes": "Stabilized delivery for a [ADD EXACT %/VALUE] increase in efficiency and achieved 100% SLA compliance."
+      "outcomes": "Stabilized delivery with a [ADD EXACT %/VALUE] increase in efficiency and achieved 100% SLA compliance."
     }
   ],
   "skills": {
     "technical": [
       "Operations Management", "Program Management", "Revenue Cycle", 
-      "Process Improvement", "SLA Management", "Lean", "Six Sigma", "Healthcare Tech"
+      "Process Improvement", "SLA Management", "Lean", "Six Sigma", "Healthcare Tech",
+      "Risk Mitigation", "Stakeholder Management", "Resource Optimization"
     ],
     "soft": [
-      "Leadership", "Communication", "Negotiation", "Mentorship", "Strategic Planning"
+      "Leadership", "Strategic Planning", "Negotiation", "Mentorship", "Change Management"
     ]
   },
   "achievements": [
@@ -106,8 +152,10 @@
     { "title": "Diamond Certificate", "org": "TEM", "note": "PHP Project Delivery" },
     { "title": "STAR Award", "org": "Optum" },
     { "title": "Leadership Excellence Award", "date": "Q3 2013", "org": "Optum" },
-    { "title": "ISO Internal Auditor", "status": "Certified" },
-    { "title": "Six Sigma Green Belt", "status": "Certified" }
+    { "title": "Special Recognition Award", "date": "Q2 2013", "org": "Optum" },
+    { "title": "ISO Certified Internal Auditor", "status": "Certified" },
+    { "title": "AHM 250 Certified", "status": "Certified" },
+    { "title": "Certified Six Sigma Green Belt", "status": "Certified" }
   ],
   "education": [
     { "degree": "MBA (HR & Marketing)", "school": "IMT Ghaziabad", "year": "2011" },
