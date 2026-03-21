@@ -28,9 +28,15 @@ const ExperienceTimeline = () => {
                 <h3 className="text-xl font-medium text-navy dark:text-white mb-1">
                   {job.title}
                 </h3>
-                <h4 className="text-base text-teal dark:text-teal-light mb-4">
+                <h4 className="text-base text-teal dark:text-teal-light mb-2">
                   {job.company}
                 </h4>
+                
+                {job.description && (
+                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4 leading-relaxed tracking-wide">
+                    {job.description}
+                  </p>
+                )}
                 
                 <ul className="space-y-3">
                   {job.bullets.map((bullet, idx) => (

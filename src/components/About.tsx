@@ -25,7 +25,7 @@ const About = () => {
                <img 
                  src="/portfolio/assets/2.jpg" 
                  alt="Professional Portrait Secondary"
-                 className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                 className="w-full h-full object-cover"
                />
             </div>
           </div>

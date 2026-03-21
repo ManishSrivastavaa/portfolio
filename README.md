@@ -2,7 +2,7 @@
 
 A polished, responsive portfolio website built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. Designed for professional leadership profiles with deep-navy aesthetics, animated counters, and a vertical career timeline.
 
-- **Live Site:** [https://anshm.github.io/portfolio/](https://anshm.github.io/portfolio/)
+- **Live Site:** [https://manishsrivastava.github.io/portfolio/](https://manishsrivastava.github.io/portfolio/)
 - **Technology Stack:** React 19, Vite, Tailwind CSS v4, Framer Motion, Radix UI.
 
 ## 🚀 Getting Started

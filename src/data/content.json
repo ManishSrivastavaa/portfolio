@@ -10,9 +10,10 @@
   "experience": [
     {
       "company": "Indegene India Pvt. Ltd.",
-      "title": "Operations Head / Sr Manager Client Services / Associate Director",
-      "range": "Dec 2022 - Present",
-      "location": "Bangalore / WFH (Gurgaon)",
+      "title": "Operations Head / Sr Manager Client Services",
+      "range": "2022 – Present",
+      "location": "Bangalore / Gurgaon",
+      "description": "Global healthcare solutions company focused on life sciences commercialization, patient support programs, and digital operations.",
       "bullets": [
         "Directed operational teams of 300+ resources, supporting a network of over 50,000 patients and healthcare professionals.",
         "Managed a $5M revenue portfolio, driving gross margins above 30%.",
@@ -22,8 +23,9 @@
     {
       "company": "Indegene India Pvt. Ltd.",
       "title": "Account / Program Manager",
-      "range": "Jul 2021 - Nov 2022",
-      "location": "Bangalore / WFH (Gurgaon)",
+      "range": "2021 – 2022",
+      "location": "Bangalore / Gurgaon",
+      "description": "Global healthcare solutions company focused on life sciences commercialization, patient support programs, and digital operations.",
       "bullets": [
         "Managed a diverse portfolio of projects spanning seven countries across the Asia-Pacific region.",
         "Ensured consistent achievement of client Service Level Agreements (SLAs) through proactive monitoring and cross-functional leadership."
@@ -32,8 +34,9 @@
     {
       "company": "Family Business / Network Marketing",
       "title": "Operations & Business Development Support",
-      "range": "Aug 2019 - Jul 2021",
+      "range": "2019 – 2021",
       "location": "Gurgaon",
+      "description": "Family-owned network marketing enterprise focused on strategic team building and independent business development.",
       "bullets": [
         "Contributed to team building, business development, and establishing business operations for a family-owned network marketing enterprise."
       ]
@@ -41,8 +44,9 @@
     {
       "company": "Optum Global Services Pvt. Ltd.",
       "title": "Quality Program Manager (IT)",
-      "range": "Jul 2007 - Aug 2019",
+      "range": "2007 – 2019",
       "location": "Gurgaon",
+      "description": "Healthcare services and technology company providing data-driven solutions for providers and health systems.",
       "bullets": [
         "Managed end-to-end Revenue Cycle and SLA Management for a team of 1400-1500 FTEs across multiple locations in India.",
         "Enhanced efficiencies across teams through Lean and Six Sigma projects, resulting in annual cost savings.",
@@ -52,8 +56,9 @@
     {
       "company": "Convergys India Services",
       "title": "Team Lead",
-      "range": "Nov 2004 - Jul 2007",
+      "range": "2004 – 2007",
       "location": "Gurgaon",
+      "description": "Multinational corporation providing customer management and information management products.",
       "bullets": [
         "Directed a team of 20 telecallers supporting the Capital One Credit Cards program.",
         "Focused on achieving key Service Level Agreements (SLAs) related to customer satisfaction and AHT."
@@ -62,8 +67,9 @@
     {
       "company": "Multiserv India Pvt. Ltd.",
       "title": "Business Development Manager",
-      "range": "Apr 2002 - Oct 2004",
+      "range": "2002 – 2004",
       "location": "New Delhi",
+      "description": "Facilities management organization specializing in large-scale operational services.",
       "bullets": [
         "Drove business growth for a facilities management company, securing new accounts and generating substantial revenue."
       ]
@@ -71,8 +77,9 @@
     {
       "company": "J.S. Designer",
       "title": "Head Quality Control Department",
-      "range": "Feb 2001 - Mar 2002",
+      "range": "2001 – 2002",
       "location": "New Delhi",
+      "description": "Apparel and textile manufacturing firm.",
       "bullets": [
         "Led the Quality Control Department, ensuring production aligned with specifications and quality benchmarks."
       ]
@@ -80,8 +87,9 @@
     {
       "company": "KBSH Export House",
       "title": "Sr. Executive P&A Department",
-      "range": "Oct 1999 - Jan 2001",
+      "range": "1999 – 2001",
       "location": "New Delhi",
+      "description": "Leading export house specializing in international garment manufacturing.",
       "bullets": [
         "Managed payroll and administrative functions, ensuring compliance with regulatory standards."
       ]

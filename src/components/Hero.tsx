@@ -46,13 +46,6 @@ const Hero = () => {
             >
               LinkedIn
             </a>
-            <a 
-              href="/portfolio/assets/Mannish Srivastava - Operations Leader.pdf" 
-              target="_blank" 
-              className="text-sm font-medium text-gray-500 hover:text-teal dark:text-gray-400 dark:hover:text-teal ml-4 underline decoration-transparent hover:decoration-teal transition-all"
-            >
-              View Resume
-            </a>
           </div>
         </div>
 
