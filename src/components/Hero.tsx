@@ -1,115 +1,80 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import content from '../data/content.json'
-import AnimatedCounter from './AnimatedCounter'
-import SectionWrapper from './SectionWrapper'
+import { useState, useEffect } from 'react';
+import contentData from '../data/content.json';
 
 const Hero = () => {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const { personalInfo } = contentData;
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
-    <SectionWrapper id="home" className="pt-120 pb-64 lg:pt-160">
-      <div className="flex flex-col lg:flex-row items-center gap-64">
-        {/* Left: Portrait */}
-        <div className="w-full lg:w-1/3 flex justify-center">
-          <motion.div
-            className="relative w-256 h-256 md:w-320 md:h-320 rounded-full overflow-hidden border-8 border-white shadow-2xl cursor-pointer group"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-              src="/portfolio/assets/1.jpg"
-              alt="Manish Mohan Srivastava — Operations Head"
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
-            />
-            <img
-              src="/portfolio/assets/2.jpg"
-              alt="Manish Mohan Srivastava — Alternate Profile"
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
-            />
-          </motion.div>
+    <section 
+      id="home" 
+      className="relative min-h-[90vh] flex items-center pt-24 md:pt-0 overflow-hidden bg-gray-50 dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800"
+    >
+      <div className="max-w-6xl mx-auto w-full px-6 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+        
+        {/* Text Area */}
+        <div 
+          className={`flex-1 flex flex-col items-start transition-all duration-1000 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <span className="section-subtitle mb-4">Operations Head</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-navy dark:text-white tracking-tight leading-[1.1] mb-6">
+            {personalInfo.name}
+          </h1>
+          <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light mb-8 max-w-lg leading-relaxed">
+            {personalInfo.title}
+          </h2>
+          
+          <p className="text-base text-gray-500 dark:text-gray-400 mb-10 max-w-xl leading-relaxed font-light">
+            Seasoned operations leader with over 20 years of experience driving operational efficiency, program, and revenue management for pharma and healthcare tech clients.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <a href={`mailto:${personalInfo.email}`} className="btn-primary">
+              Contact
+            </a>
+            <a 
+              href={personalInfo.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-secondary"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="/portfolio/assets/Mannish Srivastava - Operations Leader.pdf" 
+              target="_blank" 
+              className="text-sm font-medium text-gray-500 hover:text-teal dark:text-gray-400 dark:hover:text-teal ml-4 underline decoration-transparent hover:decoration-teal transition-all"
+            >
+              View Resume
+            </a>
+          </div>
         </div>
 
-        {/* Right: Content */}
-        <div className="w-full lg:w-2/3 text-center lg:text-left">
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            className="flex items-center justify-center lg:justify-start gap-8 mb-16"
-          >
-            <span className="text-teal font-bold tracking-widest uppercase text-sm">Based in {content.personalInfo.location}</span>
-          </motion.div>
-          
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-16 text-navy"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            {content.personalInfo.name}
-          </motion.h1>
-          
-          <motion.h2 
-            className="text-xl md:text-2xl font-medium text-teal mb-32"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            {content.personalInfo.title}
-          </motion.h2>
-
-          <motion.div 
-            className="flex flex-wrap justify-center lg:justify-start gap-16 mb-32"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.35 }}
-          >
-            <a href={`mailto:${content.personalInfo.email}`} className="flex items-center gap-8 text-sm font-medium text-gray-custom hover:text-teal transition-colors">
-              <span className="bg-sand p-8 rounded-full">✉️</span> {content.personalInfo.email}
-            </a>
-            <a href={`tel:${content.personalInfo.phone}`} className="flex items-center gap-8 text-sm font-medium text-gray-custom hover:text-teal transition-colors">
-              <span className="bg-sand p-8 rounded-full">📞</span> {content.personalInfo.phone}
-            </a>
-            <a href={content.personalInfo.linkedin} target="_blank" rel="noopener" className="flex items-center gap-8 text-sm font-medium text-gray-custom hover:text-teal transition-colors">
-              <span className="bg-sand p-8 rounded-full">🔗</span> LinkedIn
-            </a>
-          </motion.div>
-
-          <motion.p 
-            className="text-lg text-gray-custom mb-40 max-w-2xl leading-relaxed"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            {content.personalInfo.summary}
-          </motion.p>
-          
-          <motion.div 
-            className="flex flex-wrap justify-center lg:justify-start gap-16 mb-48"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <a href="/portfolio/assets/Mannish Srivastava - Operations Leader.pdf" target="_blank" className="btn-primary">
-              Download Resume (PDF)
-            </a>
-            <a href="#contact" className="btn-secondary">
-              Contact Manish
-            </a>
-          </motion.div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-24 py-24 border-y border-gray-200">
-            {content.metrics.map((metric, idx) => (
-              <AnimatedCounter key={idx} value={metric.value} label={metric.label} />
-            ))}
+        {/* Image Area */}
+        <div 
+          className={`w-full md:w-[45%] flex justify-center md:justify-end transition-all duration-1000 delay-300 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <div className="relative w-full max-w-sm aspect-[4/5] md:aspect-auto md:h-[600px] overflow-hidden rounded-sm bg-gray-200 dark:bg-slate-800">
+            <img 
+              src="/portfolio/assets/1.jpg" 
+              alt={personalInfo.name}
+              className="w-full h-full object-cover object-top"
+            />
+            {/* Subtle overlay to soften the image slightly */}
+            <div className="absolute inset-0 bg-navy/5 mix-blend-multiply dark:bg-slate-900/20"></div>
           </div>
         </div>
       </div>
-    </SectionWrapper>
-  )
-}
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;

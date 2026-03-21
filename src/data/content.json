@@ -3,19 +3,10 @@
     "name": "Manish Mohan Srivastava",
     "title": "Operations Head — Program & Operations Leadership",
     "location": "Delhi NCR",
-    "phone": "+91-9818579860",
     "email": "manishmohansrivastava@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/manish-mohan-srivastava/",
-    "languages": ["English", "Hindi"],
-    "hobbies": ["Travel", "Fitness", "Music", "Reading"],
-    "summary": "Seasoned operations leader with over 20 years of experience driving operational efficiency, program & revenue management for pharma and healthcare tech clients. Expertise in program management, Lean/Six Sigma-driven process optimization, and leading large distributed teams to deliver measurable revenue & margin improvements. Proven track record in scaling complex operations and managing multi-million dollar revenue portfolios."
+    "linkedin": "https://www.linkedin.com/in/manish-m-srivastava-0779ab1a/",
+    "summary": "Seasoned operations leader with over 20 years of experience driving operational efficiency, program, and revenue management for pharma and healthcare tech clients. Expertise in Lean/Six Sigma-driven process optimization and scaling complex operations to deliver measurable margin improvements and SLA compliance."
   },
-  "metrics": [
-    { "label": "Team Members", "value": "300+" },
-    { "label": "Revenue Portfolio", "value": "USD 5M" },
-    { "label": "Gross Margins", "value": "30%+" },
-    { "label": "Patient Network", "value": "50,000+" }
-  ],
   "experience": [
     {
       "company": "Indegene India Pvt. Ltd.",
@@ -23,12 +14,9 @@
       "range": "Dec 2022 - Present",
       "location": "Bangalore / WFH (Gurgaon)",
       "bullets": [
-        "Directed and oversaw a large-scale operational team of **300+ resources**, including Team Leads and Project Managers across India.",
-        "Supporting a network of over **50,000 patients**, doctors, and nurses.",
-        "Managed a substantial revenue portfolio of **USD 5 million** while driving impressive **gross margins of over 30%**.",
-        "Spearheaded the implementation and execution of **Patient Support Programs** for major pharmaceutical clients.",
-        "Developed and executed strategic initiatives to optimize resource allocation and drive revenue growth.",
-        "Responsible for identifying and mitigating potential risks and resolving escalated issues."
+        "Directed operational teams of 300+ resources, supporting a network of over 50,000 patients and healthcare professionals.",
+        "Managed a $5M revenue portfolio, driving gross margins above 30%.",
+        "Spearheaded the implementation of Patient Support Programs for major pharmaceutical clients."
       ]
     },
     {
@@ -37,10 +25,8 @@
       "range": "Jul 2021 - Nov 2022",
       "location": "Bangalore / WFH (Gurgaon)",
       "bullets": [
-        "Managed a diverse portfolio of projects spanning **seven countries** across the Asia-Pacific region (Australia, NZ, Japan, China, Taiwan, Macau, India).",
-        "Led cross-functional teams throughout the entire project lifecycle, ensuring projects aligned with client objectives.",
-        "Ensured consistent achievement of client **Service Level Agreements (SLAs)** through proactive monitoring.",
-        "Analyzed business requirements documents (BRDs) and reviewed design specifications."
+        "Managed a diverse portfolio of projects spanning seven countries across the Asia-Pacific region.",
+        "Ensured consistent achievement of client Service Level Agreements (SLAs) through proactive monitoring and cross-functional leadership."
       ]
     },
     {
@@ -49,9 +35,7 @@
       "range": "Aug 2019 - Jul 2021",
       "location": "Gurgaon",
       "bullets": [
-        "Supported organizational objectives by actively participating in a family-owned network marketing business.",
-        "Contributed to team building and business development initiatives.",
-        "Aided in establishing teams and business operations."
+        "Contributed to team building, business development, and establishing business operations for a family-owned network marketing enterprise."
       ]
     },
     {
@@ -60,11 +44,9 @@
       "range": "Jul 2007 - Aug 2019",
       "location": "Gurgaon",
       "bullets": [
-        "Managed end-to-end **Revenue Cycle and SLA Management** for a team of **1400-1500 FTEs** across multiple locations in India (2012-2014).",
-        "Directly supervised a team of **140 FTEs** in Provider Network Operations as Deputy Manager (2010-2012).",
-        "Enhanced efficiencies across teams through **Lean and Six Sigma projects**, resulting in annual cost savings.",
-        "Championed a **Green Belt project** focused on enhancing form-level accuracy.",
-        "Led a Lean project targeting **latency reduction** in internal systems."
+        "Managed end-to-end Revenue Cycle and SLA Management for a team of 1400-1500 FTEs across multiple locations in India.",
+        "Enhanced efficiencies across teams through Lean and Six Sigma projects, resulting in annual cost savings.",
+        "Championed Green Belt projects focused on form-level accuracy and internal latency reduction."
       ]
     },
     {
@@ -73,9 +55,8 @@
       "range": "Nov 2004 - Jul 2007",
       "location": "Gurgaon",
       "bullets": [
-        "Directed a team of **20 telecallers** in a high-volume call center supporting the Capital One Credit Cards program.",
-        "Monitored and coached team performance to optimize service delivery and customer engagement.",
-        "Focused on achieving key **Service Level Agreements (SLAs)** related to customer satisfaction and AHT."
+        "Directed a team of 20 telecallers supporting the Capital One Credit Cards program.",
+        "Focused on achieving key Service Level Agreements (SLAs) related to customer satisfaction and AHT."
       ]
     },
     {
@@ -84,9 +65,7 @@
       "range": "Apr 2002 - Oct 2004",
       "location": "New Delhi",
       "bullets": [
-        "Drove business growth for a facilities management company, securing new accounts and generating substantial revenue.",
-        "Successfully achieved the turnover goal within the first year.",
-        "Targeted potential clients and strengthened client relationships."
+        "Drove business growth for a facilities management company, securing new accounts and generating substantial revenue."
       ]
     },
     {
@@ -95,9 +74,7 @@
       "range": "Feb 2001 - Mar 2002",
       "location": "New Delhi",
       "bullets": [
-        "Led the Quality Control Department, ensuring production aligned with specifications and quality benchmarks.",
-        "Collaborated with production teams to implement quality control processes and inspections.",
-        "Minimized defects and improved product consistency."
+        "Led the Quality Control Department, ensuring production aligned with specifications and quality benchmarks."
       ]
     },
     {
@@ -106,64 +83,40 @@
       "range": "Oct 1999 - Jan 2001",
       "location": "New Delhi",
       "bullets": [
-        "Managed payroll and administrative functions, ensuring compliance with regulatory standards.",
-        "Overseeing employee compensation processes, including salary disbursement, ESI, PF, and bonuses.",
-        "Contributed to streamlined HR operations and enhanced employee satisfaction."
+        "Managed payroll and administrative functions, ensuring compliance with regulatory standards."
       ]
     }
   ],
-  "caseStudies": [
-    {
-      "title": "Patient Support Program Implementation",
-      "scope": "National (India)",
-      "problem": "Scaling operational support for major pharma clients across a distributed healthcare network.",
-      "actions": [
-        "Managed 300+ resources across multiple roles.",
-        "Optimized resource allocation using strategic initiatives.",
-        "Ensured adherence to strict quality standards and budget parameters."
-      ],
-      "outcomes": "Supported 50,000+ patients/doctors with USD 5M revenue and 30%+ gross margins."
-    },
-    {
-      "title": "Revenue Cycle & SLA Revamp",
-      "scope": "1400-1500 FTEs",
-      "problem": "Managing large-scale revenue cycle operations across multiple locations with stringent SLAs.",
-      "actions": [
-        "Implemented Lean/Six Sigma driven process optimizations.",
-        "Established clear communication channels and stakeholder management.",
-        "Automated reporting for real-time SLA tracking."
-      ],
-      "outcomes": "Stabilized delivery with a [ADD EXACT %/VALUE] increase in efficiency and achieved 100% SLA compliance."
-    }
-  ],
   "skills": {
-    "technical": [
-      "Operations Management", "Program Management", "Revenue Cycle", 
-      "Process Improvement", "SLA Management", "Lean", "Six Sigma", "Healthcare Tech",
-      "Risk Mitigation", "Stakeholder Management", "Resource Optimization"
-    ],
-    "soft": [
-      "Leadership", "Strategic Planning", "Negotiation", "Mentorship", "Change Management"
+    "groups": [
+      {
+        "title": "Operations & Program Leadership",
+        "items": ["Team Leadership", "Program Management", "Risk Mitigation", "Strategic Planning"]
+      },
+      {
+        "title": "Delivery & Process Improvement",
+        "items": ["Revenue Cycle", "SLA Management", "Lean / Six Sigma", "Resource Optimization"]
+      },
+      {
+        "title": "Stakeholder Management",
+        "items": ["Client Services", "Negotiation", "Mentorship", "Change Management"]
+      }
     ]
   },
   "achievements": [
-    { "title": "Leader of the Quarter", "count": "Multiple", "org": "Indegene" },
+    { "title": "Leader of the Quarter", "org": "Indegene" },
     { "title": "Aquamarine Award", "org": "Indegene" },
-    { "title": "Diamond Certificate", "org": "TEM", "note": "PHP Project Delivery" },
     { "title": "STAR Award", "org": "Optum" },
-    { "title": "Leadership Excellence Award", "date": "Q3 2013", "org": "Optum" },
-    { "title": "Special Recognition Award", "date": "Q2 2013", "org": "Optum" },
-    { "title": "ISO Certified Internal Auditor", "status": "Certified" },
-    { "title": "AHM 250 Certified", "status": "Certified" },
-    { "title": "Certified Six Sigma Green Belt", "status": "Certified" }
+    { "title": "Leadership Excellence Award", "org": "Optum" },
+    { "title": "ISO Certified Internal Auditor", "org": "Certified" },
+    { "title": "AHM 250 Certified", "org": "Certified" },
+    { "title": "Certified Six Sigma Green Belt", "org": "Certified" }
   ],
   "education": [
-    { "degree": "MBA (HR & Marketing)", "school": "IMT Ghaziabad", "year": "2011" },
-    { "degree": "B.A.", "school": "Delhi University", "year": "2003" }
+    { "degree": "MBA (HR & Marketing)", "school": "IMT Ghaziabad" },
+    { "degree": "B.A.", "school": "Delhi University" }
   ],
   "contact": {
-    "formConfigured": false,
-    "formType": "formspree",
-    "formEndpoint": ""
+    "formConfigured": false
   }
 }

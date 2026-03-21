@@ -3,13 +3,11 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import ExperienceTimeline from './components/ExperienceTimeline'
-import CaseStudies from './components/CaseStudies'
 import Skills from './components/Skills'
 import Achievements from './components/Achievements'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import BackToTop from './components/BackToTop'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -23,20 +21,18 @@ function App() {
   }, [isDarkMode])
 
   return (
-    <div className="min-h-screen transition-colors duration-300 dark:bg-navy-dark">
+    <div className="min-h-screen font-sans text-gray-800 bg-gray-50 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <main>
         <Hero />
         <About />
         <ExperienceTimeline />
-        <CaseStudies />
         <Skills />
         <Achievements />
         <Education />
         <Contact />
       </main>
       <Footer />
-      <BackToTop />
     </div>
   )
 }

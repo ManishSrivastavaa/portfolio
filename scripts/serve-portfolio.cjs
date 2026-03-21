@@ -7,7 +7,7 @@ const port = process.env.PORT || 5173;
 app.use('/portfolio', express.static(path.join(__dirname, '../dist')));
 
 // Fallback all other routes under /portfolio/ to index.html for SPA support
-app.get('/portfolio/*', (req, res) => {
+app.get(/\/portfolio\/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 

@@ -1,42 +1,36 @@
-import content from '../data/content.json'
-import SectionWrapper from './SectionWrapper'
+import contentData from '../data/content.json';
 
 const Skills = () => {
+  const { groups } = contentData.skills;
+
   return (
-    <SectionWrapper id="skills" className="bg-sand/30">
-      <div className="grid lg:grid-cols-2 gap-64">
-        {/* Technical & Ops Skills */}
-        <div>
-          <h2 className="text-3xl font-bold mb-32 border-b-4 border-teal inline-block pb-8 text-navy">Technical & Ops Skills</h2>
-          <div className="flex flex-wrap gap-12">
-            {content.skills.technical.map((skill, idx) => (
-              <span 
-                key={idx} 
-                className="bg-white text-navy border-2 border-navy/10 px-24 py-12 rounded-2xl font-bold text-lg hover:border-teal hover:text-teal hover:shadow-lg transition-all cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+    <section id="skills" className="py-24 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="mb-12">
+          <span className="section-subtitle">Expertise</span>
+          <h2 className="section-title mt-4">Selected Skills</h2>
         </div>
 
-        {/* Soft Skills */}
-        <div>
-          <h2 className="text-3xl font-bold mb-32 border-b-4 border-teal inline-block pb-8 text-navy">Leadership & Soft Skills</h2>
-          <div className="flex flex-wrap gap-12">
-            {content.skills.soft.map((skill, idx) => (
-              <span 
-                key={idx} 
-                className="bg-teal text-white px-24 py-12 rounded-2xl font-bold text-lg hover:bg-navy transition-all cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {groups.map((group, index) => (
+            <div key={index} className="flex flex-col">
+              <h3 className="text-sm font-semibold text-navy dark:text-white uppercase tracking-wider mb-6 pb-2 border-b border-gray-100 dark:border-slate-800">
+                {group.title}
+              </h3>
+              <ul className="space-y-4">
+                {group.items.map((skill, idx) => (
+                  <li key={idx} className="text-gray-600 dark:text-gray-400 font-light tracking-wide text-sm flex items-center">
+                    <span className="w-1.5 h-1.5 bg-teal/50 rounded-full mr-3"></span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
-    </SectionWrapper>
-  )
-}
+    </section>
+  );
+};
 
-export default Skills
+export default Skills;

@@ -1,67 +1,53 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import content from '../data/content.json'
-import SectionWrapper from './SectionWrapper'
+import contentData from '../data/content.json';
 
 const ExperienceTimeline = () => {
-  const [showAll, setShowAll] = useState(false)
-  const displayedItems = showAll ? content.experience : content.experience.slice(0, 4)
+  const { experience } = contentData;
 
   return (
-    <SectionWrapper id="experience" className="bg-sand/30">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-16 text-center text-navy">Professional Experience</h2>
-        <p className="text-center text-gray-custom mb-64 max-w-2xl mx-auto italic">A career spanning over two decades of operational excellence and leadership.</p>
+    <section id="experience" className="py-24 bg-gray-50 dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="mb-16">
+          <span className="section-subtitle">Career Journey</span>
+          <h2 className="section-title mt-4">Professional Experience</h2>
+        </div>
 
-        <div className="relative border-l-4 border-teal ml-8 md:ml-32 md:pl-48 pl-24 space-y-48">
-          {displayedItems.map((item, idx) => (
-            <motion.div
-              key={`${item.company}-${item.title}-${idx}`}
-              initial={{ x: -20, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              {/* Timeline dot */}
-              <div className="absolute -left-[32px] md:-left-[64px] top-0 w-24 h-24 bg-teal rounded-full border-4 border-white shadow-lg" />
+        <div className="space-y-12">
+          {experience.map((job, index) => (
+            <div key={index} className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 group">
+              
+              <div className="md:w-[220px] shrink-0 pt-2 border-t md:border-t-0 border-gray-200 dark:border-slate-800 md:text-right">
+                <p className="text-sm font-medium text-gray-500 dark:text-gray-400 tracking-wide uppercase">
+                  {job.range}
+                </p>
+                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 hidden md:block">
+                  {job.location}
+                </p>
+              </div>
 
-              <div className="bg-white p-32 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-                <div className="flex flex-col md:flex-row md:justify-between mb-16 gap-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-navy">{item.title}</h3>
-                    <div className="text-teal font-semibold text-lg">{item.company}</div>
-                  </div>
-                  <div className="text-right flex flex-col items-end">
-                    <div className="text-sm font-bold text-gray-custom uppercase tracking-wider bg-sand px-12 py-4 rounded-lg">{item.range}</div>
-                    <div className="text-sm text-gray-500 italic mt-4">{item.location}</div>
-                  </div>
-                </div>
-
-                <ul className="list-disc list-inside space-y-12 text-gray-custom dark:text-gray-300">
-                  {item.bullets.map((bullet, i) => (
-                    <li key={i} className="leading-relaxed marker:text-teal" 
-                        dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+              <div className="flex-1 pb-12 border-b border-gray-100 dark:border-slate-800 group-last:border-0">
+                <h3 className="text-xl font-medium text-navy dark:text-white mb-1">
+                  {job.title}
+                </h3>
+                <h4 className="text-base text-teal dark:text-teal-light mb-4">
+                  {job.company}
+                </h4>
+                
+                <ul className="space-y-3">
+                  {job.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex items-start text-sm md:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                      <span className="mr-3 mt-2 block w-[4px] h-[4px] bg-gray-300 dark:bg-gray-600 rounded-full shrink-0"></span>
+                      <span>{bullet.replace(/\*\*/g, '')}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+              
+            </div>
           ))}
         </div>
-
-        {content.experience.length > 4 && (
-          <div className="text-center mt-64 no-print">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="btn-secondary px-48 py-16 text-lg font-bold shadow-md hover:shadow-lg transition-all"
-            >
-              {showAll ? 'Collapse Chronology' : 'View Full Professional Journey'}
-            </button>
-          </div>
-        )}
       </div>
-    </SectionWrapper>
-  )
-}
+    </section>
+  );
+};
 
-export default ExperienceTimeline
+export default ExperienceTimeline;
