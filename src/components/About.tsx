@@ -4,33 +4,35 @@ const About = () => {
   const { personalInfo } = contentData;
 
   return (
-    <section id="about" className="py-24 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row gap-16 md:gap-24 items-start">
-          
-          <div className="md:w-1/3">
-            <span className="section-subtitle">Professional Summary</span>
-            <h2 className="section-title mt-4">At a glance</h2>
+    <section id="about" className="py-24 lg:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        
+        {/* Large Editorial Second Image */}
+        <div className="w-full lg:w-5/12">
+          <div className="relative aspect-[4/5] overflow-hidden bg-stone">
+            <img 
+              src="/portfolio/assets/2.jpg" 
+              alt="Professional Snapshot"
+              className="w-full h-full object-cover"
+            />
           </div>
-          
-          <div className="md:w-2/3 flex flex-col lg:flex-row gap-12 items-start">
-            <div className="flex-1">
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed">
-                {personalInfo.summary}
-              </p>
-            </div>
-            
-            {/* Small subtle secondary image */}
-            <div className="w-48 h-64 shrink-0 rounded-sm overflow-hidden bg-gray-100 dark:bg-slate-800 hidden lg:block">
-               <img 
-                 src="/portfolio/assets/2.jpg" 
-                 alt="Professional Portrait Secondary"
-                 className="w-full h-full object-cover"
-               />
-            </div>
-          </div>
-
         </div>
+
+        {/* Career Context Text */}
+        <div className="w-full lg:w-7/12 flex flex-col justify-center">
+          <span className="section-subtitle">Career Context</span>
+          <h2 className="section-title">Leadership & Delivery</h2>
+          
+          <div className="mt-8 space-y-6 text-base md:text-lg text-charcoal/70 font-light leading-relaxed">
+            <p>
+              {personalInfo.summary}
+            </p>
+            <p>
+              A strong proponent of structured, Lean-driven environments, I focus on stabilizing the delivery center ecosystem, elevating quality protocols, and championing margin improvements. My leadership philosophy is built on establishing clear communication, optimizing resource allocation, and mentoring distributed teams toward operational excellence.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   );

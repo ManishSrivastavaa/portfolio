@@ -1,40 +1,32 @@
-import { useState, useEffect } from 'react';
 import contentData from '../data/content.json';
 
 const Hero = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const { personalInfo } = contentData;
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
     <section 
       id="home" 
-      className="relative min-h-[90vh] flex items-center pt-24 md:pt-0 overflow-hidden bg-gray-50 dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800"
+      className="relative min-h-screen flex items-center pt-24 md:pt-0 bg-ivory overflow-hidden border-b border-border-warm"
     >
-      <div className="max-w-6xl mx-auto w-full px-6 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+      <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-24">
         
-        {/* Text Area */}
-        <div 
-          className={`flex-1 flex flex-col items-start transition-all duration-1000 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <span className="section-subtitle mb-4">Operations Head</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-navy dark:text-white tracking-tight leading-[1.1] mb-6">
+        {/* Minimal Text Area */}
+        <div className="flex-1 flex flex-col items-start pt-8 pb-16 md:py-0">
+          <span className="section-subtitle">Executive Profile</span>
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-ink tracking-tight mb-6 leading-[1.1]">
             {personalInfo.name}
           </h1>
-          <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light mb-8 max-w-lg leading-relaxed">
+          
+          <h2 className="text-xl md:text-2xl text-charcoal/80 font-light mb-8 max-w-xl leading-snug">
             {personalInfo.title}
           </h2>
           
-          <p className="text-base text-gray-500 dark:text-gray-400 mb-10 max-w-xl leading-relaxed font-light">
-            Seasoned operations leader with over 20 years of experience driving operational efficiency, program, and revenue management for pharma and healthcare tech clients.
+          <p className="text-base md:text-lg text-charcoal/60 mb-12 max-w-2xl leading-relaxed font-light">
+            Seasoned operations leader with over two decades of experience optimizing complex workflows, managing multi-million-dollar portfolios, and driving patient support programs within the healthcare sector.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex items-center gap-6">
             <a href={`mailto:${personalInfo.email}`} className="btn-primary">
               Contact
             </a>
@@ -42,29 +34,24 @@ const Hero = () => {
               href={personalInfo.linkedin} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn-secondary"
+              className="text-sm font-medium tracking-wide text-charcoal hover:text-teal underline underline-offset-4 decoration-charcoal/30 hover:decoration-teal transition-all"
             >
-              LinkedIn
+              LinkedIn Profile
             </a>
           </div>
         </div>
 
-        {/* Image Area */}
-        <div 
-          className={`w-full md:w-[45%] flex justify-center md:justify-end transition-all duration-1000 delay-300 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <div className="relative w-full max-w-sm aspect-[4/5] md:aspect-auto md:h-[600px] overflow-hidden rounded-sm bg-gray-200 dark:bg-slate-800">
+        {/* Elegant Image Framing */}
+        <div className="w-full md:w-[45%] flex justify-center md:justify-end mt-12 md:mt-0">
+          <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden bg-stone shadow-sm">
             <img 
               src="/portfolio/assets/1.jpg" 
               alt={personalInfo.name}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-[center_top]"
             />
-            {/* Subtle overlay to soften the image slightly */}
-            <div className="absolute inset-0 bg-navy/5 mix-blend-multiply dark:bg-slate-900/20"></div>
           </div>
         </div>
+        
       </div>
     </section>
   );

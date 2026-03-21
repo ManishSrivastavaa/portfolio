@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react'
 
-interface NavbarProps {
-  isDarkMode: boolean
-  setIsDarkMode: (val: boolean) => void
-}
-
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'Summary', href: '#about' },
@@ -13,7 +8,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ]
 
-const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -26,52 +21,36 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
   }, [])
 
   return (
-    <nav className={`fixed top-0 w-full z-40 transition-all duration-300 no-print border-b
+    <nav className={`fixed top-0 w-full z-40 transition-all duration-500 no-print 
       ${isScrolled 
-        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-gray-100 dark:border-slate-800 py-4' 
-        : 'bg-white/40 dark:bg-slate-900/40 backdrop-blur-sm border-transparent py-6'
+        ? 'bg-ivory/90 backdrop-blur-md border-b border-border-warm py-4 shadow-sm' 
+        : 'bg-transparent border-transparent py-8'
       }`}>
-      <div className="max-w-6xl mx-auto px-6 md:px-8 flex justify-between items-center">
-        <a href="#home" className="text-xl font-medium tracking-tight text-navy dark:text-white flex items-center gap-3">
-          <span className="w-8 h-8 flex items-center justify-center bg-navy text-white dark:bg-white dark:text-navy text-xs font-bold rounded-sm">
-            MS
-          </span>
-          <span className="hidden sm:inline">Manish Srivastava</span>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+        {/* Editorial Logo Treatment */}
+        <a href="#home" className="text-xl font-medium tracking-tight text-charcoal flex items-baseline gap-2">
+          <span className="font-semibold text-teal">M.</span>
+          <span className="hidden sm:inline">Srivastava</span>
         </a>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-teal dark:hover:text-teal transition-colors"
+              className="text-sm font-medium text-charcoal/70 hover:text-teal transition-colors tracking-wide"
             >
               {link.name}
             </a>
           ))}
-          
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-sm"
-            aria-label="Toggle dark mode"
-          >
-            {isDarkMode ? '🌞' : '🌙'}
-          </button>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center gap-4">
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-sm"
-          >
-            {isDarkMode ? '🌞' : '🌙'}
-          </button>
-          
+        <div className="md:hidden flex items-center pr-2">
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-navy dark:text-white"
+            className="text-charcoal p-2"
             aria-label="Toggle menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,20 +65,22 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: NavbarProps) => {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 shadow-xl px-6 py-4 flex flex-col gap-4">
+      <div 
+        className={`md:hidden absolute top-full left-0 w-full bg-ivory border-b border-border-warm shadow-lg transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0 py-0'}`}
+      >
+        <div className="flex flex-col px-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-base font-medium text-gray-800 dark:text-gray-200 hover:text-teal py-2 border-b border-gray-50 dark:border-slate-800/50 last:border-0"
+              className="text-base font-medium text-charcoal hover:text-teal py-4 border-b border-stone last:border-0"
             >
               {link.name}
             </a>
           ))}
         </div>
-      )}
+      </div>
     </nav>
   )
 }

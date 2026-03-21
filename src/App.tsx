@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,19 +9,9 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [isDarkMode])
-
   return (
-    <div className="min-h-screen font-sans text-gray-800 bg-gray-50 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+    <div className="min-h-screen font-sans text-charcoal bg-ivory antialiased selection:bg-teal selection:text-white">
+      <Navbar />
       <main>
         <Hero />
         <About />

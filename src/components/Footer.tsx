@@ -2,18 +2,18 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-white dark:bg-slate-900">
-      <div className="max-w-6xl mx-auto px-6 text-center flex flex-col items-center gap-4">
-        <p className="text-sm text-gray-400 dark:text-gray-500 font-light">
+    <footer className="py-12 bg-ivory border-t border-border-warm">
+      <div className="max-w-7xl mx-auto px-6 text-center flex flex-col items-center gap-3">
+        <p className="text-sm text-charcoal/50 font-light tracking-wide">
           &copy; {currentYear} Manish Mohan Srivastava. All rights reserved.
         </p>
-        <p className="text-xs text-gray-400 dark:text-gray-600 font-light">
+        <p className="text-xs text-charcoal/40 font-light tracking-wide uppercase">
           Website created by{' '}
           <a 
             href="https://www.linkedin.com/in/ansh-srivastava-16a6b42a4/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-teal dark:hover:text-teal transition-colors underline decoration-transparent hover:decoration-teal"
+            className="text-teal hover:text-ink transition-colors underline underline-offset-4 decoration-transparent hover:decoration-ink/30"
           >
             Ansh Srivastava
           </a>

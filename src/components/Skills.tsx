@@ -4,23 +4,22 @@ const Skills = () => {
   const { groups } = contentData.skills;
 
   return (
-    <section id="skills" className="py-24 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="mb-12">
-          <span className="section-subtitle">Expertise</span>
-          <h2 className="section-title mt-4">Selected Skills</h2>
+    <section id="skills" className="py-24 lg:py-32 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="mb-20 text-center md:text-left">
+          <span className="section-subtitle">Core Expertise</span>
+          <h2 className="section-title">Focus Areas</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
           {groups.map((group, index) => (
             <div key={index} className="flex flex-col">
-              <h3 className="text-sm font-semibold text-navy dark:text-white uppercase tracking-wider mb-6 pb-2 border-b border-gray-100 dark:border-slate-800">
+              <h3 className="text-sm font-medium text-ink uppercase tracking-widest mb-8 pb-4 border-b border-border-warm">
                 {group.title}
               </h3>
               <ul className="space-y-4">
                 {group.items.map((skill, idx) => (
-                  <li key={idx} className="text-gray-600 dark:text-gray-400 font-light tracking-wide text-sm flex items-center">
-                    <span className="w-1.5 h-1.5 bg-teal/50 rounded-full mr-3"></span>
+                  <li key={idx} className="text-charcoal/70 font-light tracking-wide flex items-center">
                     {skill}
                   </li>
                 ))}

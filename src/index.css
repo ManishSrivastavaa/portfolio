@@ -7,7 +7,8 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply antialiased min-h-screen flex flex-col;
+    @apply antialiased min-h-screen flex flex-col bg-ivory text-charcoal;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
@@ -18,36 +19,37 @@
 }
 
 :root {
-  --teal-light: #2dd4bf;
-  --teal: #0f766e;
-  --teal-dark: #115e59;
-  --navy: #1e293b;
-  --navy-dark: #0f172a;
+  --ivory: #faf9f6;
+  --stone: #f2efe9;
+  --charcoal: #1c1917;
+  --ink: #0f172a;
+  --teal: #115e59;
+  --teal-light: #0d9488;
+  --brass: #b4975a;
+  --border-warm: #e6e4df;
 }
 
 @layer components {
-  /* Minimal Buttons */
+  /* Editorial Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-2.5 
-           text-sm font-medium tracking-wide transition-all duration-200
-           bg-navy text-white hover:bg-teal 
-           dark:bg-white dark:text-navy dark:hover:bg-teal dark:hover:text-white
-           rounded-sm;
+    @apply inline-flex items-center justify-center px-8 py-3 
+           text-sm font-medium tracking-wide transition-all duration-300
+           bg-charcoal text-white hover:bg-teal 
+           border border-transparent;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-2.5 
-           text-sm font-medium tracking-wide transition-all duration-200
-           border border-gray-300 text-navy hover:border-teal hover:text-teal
-           dark:border-slate-700 dark:text-gray-300 dark:hover:border-teal dark:hover:text-teal
-           bg-transparent rounded-sm;
+    @apply inline-flex items-center justify-center px-8 py-3 
+           text-sm font-medium tracking-wide transition-all duration-300
+           bg-transparent text-charcoal border border-charcoal/20
+           hover:border-charcoal hover:bg-stone;
   }
 
-  /* Subtle Section Titles */
+  /* Editorial Titles */
   .section-title {
-    @apply text-3xl font-light tracking-tight text-navy dark:text-white mb-2;
+    @apply text-3xl md:text-4xl font-light tracking-tight text-ink mb-4;
   }
   .section-subtitle {
-    @apply text-sm text-gray-500 tracking-widest uppercase mb-12 dark:text-gray-400;
+    @apply text-xs tracking-[0.2em] font-medium text-brass uppercase mb-4 block;
   }
 }
