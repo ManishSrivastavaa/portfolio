@@ -16,6 +16,13 @@
   .text-balance {
     text-wrap: balance;
   }
+  .hairline-border {
+    @apply border-charcoal/10;
+  }
+}
+
+.prose-editorial {
+  @apply max-w-[65ch] leading-relaxed;
 }
 
 :root {
