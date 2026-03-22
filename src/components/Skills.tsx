@@ -4,7 +4,7 @@ const Skills = () => {
   const { groups } = contentData.skills;
 
   return (
-    <section id="skills" className="py-24 lg:py-32 bg-white">
+    <section id="expertise" className="py-24 lg:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="mb-20 text-center md:text-left">
           <span className="section-subtitle">Core Expertise</span>

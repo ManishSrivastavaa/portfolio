@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 
 const navLinks = [
   { name: 'Home', href: '#home' },
-  { name: 'Summary', href: '#about' },
-  { name: 'Journey', href: '#experience' },
-  { name: 'Expertise', href: '#skills' },
+  { name: 'Summary', href: '#summary' },
+  { name: 'Journey', href: '#journey' },
+  { name: 'Expertise', href: '#expertise' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -19,6 +19,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isMobileMenuOpen])
 
   return (
     <nav className={`fixed top-0 w-full z-40 transition-all duration-500 no-print 
@@ -50,7 +58,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center pr-2">
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-charcoal p-2"
+            className="text-charcoal p-2 z-50 relative"
             aria-label="Toggle menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,23 +72,21 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-ivory border-b border-border-warm shadow-lg transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0 py-0'}`}
-      >
-        <div className="flex flex-col px-6">
+      {/* Full-screen Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 bg-ivory z-40 flex flex-col items-center justify-center space-y-8 animate-fade-in">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-base font-medium text-charcoal hover:text-teal py-4 border-b border-stone last:border-0"
+              className="text-2xl font-light text-ink hover:text-teal transition-colors"
             >
               {link.name}
             </a>
           ))}
         </div>
-      </div>
+      )}
     </nav>
   )
 }

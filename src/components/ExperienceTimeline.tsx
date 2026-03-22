@@ -4,7 +4,7 @@ const ExperienceTimeline = () => {
   const { experience } = contentData;
 
   return (
-    <section id="experience" className="py-24 lg:py-32 bg-ivory border-t border-charcoal/10">
+    <section id="journey" className="py-24 lg:py-32 bg-ivory border-t border-charcoal/10">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-20 text-center md:text-left">
           <span className="section-subtitle">Career Journey</span>
