@@ -14,7 +14,7 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-24">
           {groups.map((group, index) => (
             <div key={index} className="flex flex-col">
-              <h3 className="text-xs font-semibold text-charcoal/60 uppercase tracking-[0.15em] mb-6 pb-4 border-b border-charcoal/10">
+              <h3 className="text-[11px] font-semibold text-charcoal/60 uppercase tracking-[0.2em] mb-8 pb-4 border-b border-charcoal/10">
                 {group.title}
               </h3>
               <ul className="space-y-4">
