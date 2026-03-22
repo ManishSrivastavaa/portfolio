@@ -98,3 +98,95 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+/* Timeline Components */
+.timeline-container {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  column-gap: 48px;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 140px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+.timeline-entry {
+  display: contents; /* Allows children to participate in the container's grid */
+}
+
+.timeline-item-wrapper {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  column-gap: 48px;
+  margin-bottom: 64px;
+  position: relative;
+}
+
+.date-column {
+  text-align: right;
+  padding-right: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.location-text {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  @apply text-gray-custom italic;
+}
+
+.content-column {
+  position: relative;
+  z-index: 1;
+}
+
+.content-column p {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.role-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  @apply text-navy;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: #2aa198;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    grid-template-columns: 1fr;
+    display: block;
+  }
+  
+  .timeline-item-wrapper {
+    grid-template-columns: 1fr;
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .date-column {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+}
