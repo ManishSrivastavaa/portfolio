@@ -2,21 +2,21 @@
 
 @theme {
   --color-navy: #f8fafc;
-  --color-navy-dark: #0f172a;
+  --color-navy-dark: #07090e;
   --color-teal: #14b8a6;
   --color-teal-light: #2ed4c6;
-  --color-sand: #070a13;
+  --color-sand: #090b11;
   --color-gray-custom: #94a3b8;
   --color-gold: #c5a880;
   
   /* Additional dark mode utility mappings */
-  --color-white: #111827;
-  --color-ivory: #070a13;
-  --color-stone: #1f2937;
+  --color-white: #0e111a;
+  --color-ivory: #090b11;
+  --color-stone: #131723;
   --color-charcoal: #94a3b8;
   --color-ink: #f8fafc;
   --color-brass: #c5a880;
-  --color-border-warm: rgba(255, 255, 255, 0.08);
+  --color-border-warm: rgba(255, 255, 255, 0.06);
 
   --font-heading: "Inter", "sans-serif";
   --font-body: "Roboto", "system-ui", "sans-serif";
@@ -125,10 +125,10 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #070a13;
+  background-color: #090b11;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #1f2937;
+  background-color: #131723;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {

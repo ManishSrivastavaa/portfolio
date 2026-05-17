@@ -106,38 +106,41 @@ const Navbar = () => {
           aria-label="Navigation menu"
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-sand" />
+          <div className="absolute inset-0 bg-sand/98 backdrop-blur-xl" />
           
           {/* Close button at top right */}
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-6 right-6 z-[60] p-2 text-charcoal hover:text-teal transition-colors"
+            className="absolute top-6 right-6 z-[60] p-3 rounded-full border border-white/10 bg-white/5 text-ink hover:text-teal hover:bg-white/10 transition-all duration-300"
             aria-label="Close menu"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           {/* Nav Links — centered */}
-          <div className="relative z-[55] flex flex-col items-center justify-center h-full space-y-10">
-            {navLinks.map((link, index) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleMobileLinkClick(link.href)
-                }}
-                className="mobile-nav-link text-3xl font-light text-ink hover:text-teal transition-colors tracking-wide"
-                style={{ animationDelay: `${index * 60}ms` }}
-              >
-                {link.name}
-              </a>
-            ))}
+          <div className="relative z-[55] flex flex-col items-center justify-center h-full space-y-12">
+            <div className="flex flex-col items-center space-y-8">
+              {navLinks.map((link, index) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleMobileLinkClick(link.href)
+                  }}
+                  className="mobile-nav-link group relative text-4xl font-extralight tracking-wider text-ink hover:text-teal transition-all duration-300 flex items-baseline gap-4"
+                  style={{ animationDelay: `${index * 60}ms` }}
+                >
+                  <span className="text-xs text-teal/40 font-mono tracking-normal">0{index + 1}</span>
+                  <span>{link.name}</span>
+                </a>
+              ))}
+            </div>
             
             {/* Subtle decorative line */}
-            <div className="w-12 h-px bg-charcoal/15 mt-4" />
+            <div className="w-16 h-px bg-white/10 mt-8" />
             
             <a 
               href="#home" 
@@ -145,7 +148,7 @@ const Navbar = () => {
                 e.preventDefault()
                 handleMobileLinkClick('#home')
               }}
-              className="text-xs tracking-[0.25em] text-charcoal/40 uppercase font-medium"
+              className="text-[11px] tracking-[0.3em] text-charcoal/50 uppercase font-semibold hover:text-teal transition-colors duration-300"
             >
               M. Srivastava
             </a>
