@@ -4,16 +4,17 @@ const About = () => {
   const { personalInfo } = contentData;
 
   return (
-    <section id="summary" className="py-24 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+    <section id="summary" className="py-28 lg:py-36 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-28">
         
         {/* Large Editorial Second Image */}
         <div className="w-full lg:w-5/12">
-          <div className="relative aspect-[4/5] overflow-hidden bg-stone">
+          <div className="relative aspect-[3/4] overflow-hidden bg-stone about-portrait">
             <img 
-              src="/portfolio/assets/2.jpg" 
+              src="/portfolio/assets/2.jpeg" 
               alt="Professional Snapshot"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_15%]"
+              loading="lazy"
             />
           </div>
         </div>

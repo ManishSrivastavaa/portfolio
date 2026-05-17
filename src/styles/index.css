@@ -61,6 +61,42 @@
 .w-320 { width: 320px; }
 .h-320 { height: 320px; }
 
+/* ── Hero Portrait ── */
+.hero-portrait {
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ── About Portrait ── */
+.about-portrait {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ── Mobile Menu ── */
+.mobile-menu-overlay {
+  animation: menuFadeIn 0.25s ease-out;
+}
+
+.mobile-nav-link {
+  animation: navLinkSlideUp 0.4s ease-out both;
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes navLinkSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Print Styles */
 @media print {
   .no-print {
@@ -98,6 +134,7 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 /* Timeline Components */
 .timeline-container {
   display: grid;

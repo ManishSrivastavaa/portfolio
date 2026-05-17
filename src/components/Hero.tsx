@@ -8,10 +8,10 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center pt-24 md:pt-0 bg-ivory overflow-hidden border-b border-border-warm"
     >
-      <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-24">
+      <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20 lg:gap-28">
         
         {/* Minimal Text Area */}
-        <div className="flex-1 flex flex-col items-start pt-8 pb-16 md:py-0">
+        <div className="flex-1 flex flex-col items-start pt-4 pb-16 md:py-0">
           <span className="section-subtitle">Executive Profile</span>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-ink tracking-tight mb-6 leading-[1.1]">
@@ -41,13 +41,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Elegant Image Framing */}
-        <div className="w-full md:w-[45%] flex justify-center md:justify-end mt-12 md:mt-0">
-          <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden bg-stone shadow-sm">
+        {/* Hero Portrait — editorial, confident framing */}
+        <div className="w-full md:w-[45%] flex justify-center md:justify-end mt-8 md:mt-0">
+          <div className="relative w-full max-w-md overflow-hidden bg-stone shadow-sm hero-portrait">
             <img 
-              src="/portfolio/assets/1.jpg" 
+              src="/portfolio/assets/1.jpeg" 
               alt={personalInfo.name}
               className="w-full h-full object-cover object-[center_top]"
+              loading="eager"
             />
           </div>
         </div>
