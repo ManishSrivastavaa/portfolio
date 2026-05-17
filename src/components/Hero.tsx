@@ -45,7 +45,7 @@ const Hero = () => {
         <div className="w-full md:w-[45%] flex justify-center md:justify-end mt-8 md:mt-0">
           <div className="relative w-full max-w-md overflow-hidden bg-stone shadow-sm hero-portrait">
             <img 
-              src="/portfolio/assets/1.jpeg" 
+              src={`${import.meta.env.BASE_URL}assets/1.jpeg`} 
               alt={personalInfo.name}
               className="w-full h-full object-cover object-[center_top]"
               loading="eager"

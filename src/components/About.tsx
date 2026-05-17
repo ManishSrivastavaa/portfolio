@@ -11,7 +11,7 @@ const About = () => {
         <div className="w-full lg:w-5/12">
           <div className="relative aspect-[3/4] overflow-hidden bg-stone about-portrait">
             <img 
-              src="/portfolio/assets/2.jpeg" 
+              src={`${import.meta.env.BASE_URL}assets/2.jpeg`} 
               alt="Professional Snapshot"
               className="w-full h-full object-cover object-[center_15%]"
               loading="lazy"
