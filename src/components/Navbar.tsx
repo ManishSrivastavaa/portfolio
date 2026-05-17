@@ -106,7 +106,7 @@ const Navbar = () => {
           aria-label="Navigation menu"
         >
           {/* Backdrop */}
-          <div className="absolute inset-0" style={{ backgroundColor: '#faf9f6' }} />
+          <div className="absolute inset-0 bg-sand" />
           
           {/* Close button at top right */}
           <button
